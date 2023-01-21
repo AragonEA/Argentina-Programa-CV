@@ -117,3 +117,16 @@ img {
     padding: 40px;
 }
 
+button {
+	padding: 0.10em 0.1em;
+    margin-top: 10px;
+	border: 0.1em solid #FFFFFF;
+	border-radius: 0.12em;
+	font-family: 'Roboto',sans-serif;
+	transition: all 0.2s;
+}
+    button:hover{
+    color: #FFFFFF;
+    background-color:#333;
+    }
+
