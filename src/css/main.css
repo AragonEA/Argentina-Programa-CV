@@ -37,6 +37,9 @@ body {
     overflow: hidden;
 }
 
+img {
+    width: 100%;
+}
 
 .profileText h2 {
     color: #fff;
