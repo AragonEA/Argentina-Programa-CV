@@ -2,140 +2,58 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: x-large;
 }
 
 body {
-    background-color: #333333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
 }
 
-.container {
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    height: 100vh;
 }
 
-.profileText {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #333;
 }
 
-.profileText .img {
-    position: relative;
-    width: 200px;
-    height: 200px;
-    border-radius: 15%;
-    overflow: hidden;
 }
 
-img {
     width: 100%;
 }
 
-.profileText h2 {
-    color: #fff;
-    font-size: 1.5em;
-    margin-top: 20px;
-    text-transform: uppercase;
     text-align: center;
-    line-height: 1.4em;
-}
-
-.profileText span {
-    color: #fff;
-    text-transform: uppercase;
-    text-align: center;
-
-}
-
-.title {
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 20px;
-}
-
-.info {
-    padding-top: 40px;
-}
-
-.info ul li {
-    color: #fff;
-    list-style: none;
-}
-
-.about {
-    margin: 20px 0 50px 45px;
-    padding-bottom: 1rem;
-}
-
-.rightSideTitle {
-    color: #003147;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
-}
-
-.about .box {
-    margin: 20px 0;
-}
-
-.about .box h5 {
-    text-transform: uppercase;
-    color: #848c90;
-}
-
-.about .box .text h4 {
-    text-transform: uppercase;
-    font-size: 16px;
 }
 
 
-.skills .box h4 {
-    text-transform: uppercase;
-    font-weight: 500;
-    color: #333;
 }
 
-.container .left {
-    position: relative;
-    background-color: #333333;
-    padding: 40px;
 }
 
-.container .right {
-    background: #fff;
-    padding: 40px;
 }
 
-button {
-	padding: 0.10em 0.1em;
-    margin-top: 10px;
-	border: 0.1em solid #FFFFFF;
-	border-radius: 0.12em;
-	font-family: 'Roboto',sans-serif;
-	transition: all 0.2s;
 }
-    button:hover{
-    color: #FFFFFF;
-    background-color:#333;
+
+}
+
+}
+
+}
+
+}
+
+}
+
+
+}
+
+}
+
+}
+
+}
     }
 
-@media (max-width: 1000px) {
-    .container {
-        grid-template-columns: repeat(1, 1fr);
     }
 
-    .interest ul {
-        grid-template-columns: repeat(2, 1fr);
     }
 }
