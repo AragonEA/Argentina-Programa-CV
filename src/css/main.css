@@ -84,20 +84,51 @@ body {
     background-color: var(--main-gray);
 }
 
+.projects-section {
     text-align: center;
+    padding: 10rem 2rem;
+    background: var(--main-gray);
 }
 
-
+.projects-section-header {
+    max-width: 640px;
+    margin: 0 auto 6rem auto;
+    border-bottom: 0.2rem solid white;
 }
 
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-gap: 4rem;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 6rem;
 }
 
+.project {
+    background: var(--main-black);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
 }
 
+.project:hover .code {
+    color: var(--main-red);
+    isolation: isolate;
 }
 
+.project-image {
+    height: 250px;
 }
 
+.project-title {
+    font-size: 2rem;
+    padding: 2rem 0.5rem;
+}
+
+.code {
+    color: var(--main-black);
+    transition: color 0.3s ease-out;
 }
 
 }
