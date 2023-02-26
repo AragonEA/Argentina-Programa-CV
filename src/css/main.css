@@ -17,9 +17,47 @@ html {
 }
 
 body {
+    font-family: 'Poppins', sans-serif;
+        /* 18px */
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--main-white);
 }
 
+h1,h2 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    text-align: center;
+}
+
+h1 {
+    font-size: 6rem;
+}
+
+h2 {
+    font-size: 3.7rem;
+}
+
+h3 {
+    border-bottom: 0.2rem solid white;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--main-white);
+}
+
+img {
+    display: block;
     width: 100%;
+    border-radius: 10px;
+}
+
     display: grid;
 }
 
@@ -196,6 +234,14 @@ body {
     transform: translateY(8px);
     border-bottom: 0.2rem solid var(--main-red);
 }
+
+
+
+
+.hidden {
+    display: none;
+}
+
 footer {
     font-weight: 300;
     display: flex;
