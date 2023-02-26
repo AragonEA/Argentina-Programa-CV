@@ -241,6 +241,10 @@ form {
 
 
 
+#download-btn {
+    background-color: rgba(0, 0, 0, 0);
+    border: 0px;
+}
 
 .hidden {
     display: none;
