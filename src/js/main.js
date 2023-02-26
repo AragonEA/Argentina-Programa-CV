@@ -1,48 +1,71 @@
-const URL = 'https://randomuser.me/api/';
-const PARAMETERS = '?nat=br,es,mx,us&noinfo';
 
-function changePageData(response) {
-    changeName(response.name);
-    changeImage(response.picture.large);
-    changeAboutMe(response);
-    changeContactInfo(response);
+initialize();
+
+function initialize() {
+    getDataFromAPI();
+    document.getElementById('mail-btn').addEventListener('click', hideMailForm);
 }
 
-try {
-    fetch(URL + PARAMETERS)
-        .then(response => response.json())
-        .then(response => {
-            let responseData = response.results[0];
-            changePageData(responseData);
-        });
-} catch (error) { console.error(error); }
-
-
-
-function changeContactInfo(response) {
-    document.querySelector('#cell-number').textContent += `${response.cell}`
-
-    document.querySelector('#phone-number').textContent += `${response.phone}`
-
-    document.querySelector('#email').textContent += `${response.email}`
+function getDataFromAPI() {
+    const URL = 'https://randomuser.me/api/';
+    const PARAMETERS = '?nat=br,es,mx,us&noinfo';
+    try {
+        fetch(URL + PARAMETERS)
+            .then(response => response.json())
+            .then(response => {
+                let responseData = response.results[0];
+                addUserDataFromAPI(responseData);
+            });
+    } catch (error) { console.error(error); }
 }
 
-function changeAboutMe(response) {
-    document.querySelector('#location').textContent +=
+function addUserDataFromAPI(response) {
+    addName(response.name);
+    addImage(response.picture.large);
+    addAboutMeInfo(response);
+    addContactInfo(response);
+    addContactButtonsInfo(response);
+}
+
+function addContactInfo(response) {
+    document.getElementById('cell-number').textContent += `${response.cell}`
+    document.getElementById('phone-number').textContent += `${response.phone}`
+    document.getElementById('email').textContent += `${response.email}`
+}
+
+function addContactButtonsInfo(response) {
+    document.getElementById('phone-btn').href = `tel: ${response.phone}`
+    document.getElementById('whatsapp-btn').href = `text: ${response.cell}`
+    document.getElementById('mail-btn').href = `mailto: ${response.email}`
+}
+
+function addAboutMeInfo(response) {
+    document.getElementById('location').textContent +=
         `${response.location.country}. ` + `${response.location.state}, ` + `${response.location.city}`
 
-    
-    document.querySelector('#gender').textContent += `${response.gender}`.charAt(0).toUpperCase() + `${response.gender}`.slice(1);
+    document.getElementById('gender').textContent += capitalize(response.gender);
 
-    document.querySelector('#age').textContent += `${response.dob.age}`
+    document.getElementById('age').textContent += `${response.dob.age}`
 
-    document.querySelector('#birthdate').textContent += `${response.dob.date.split('T')[0]}`
+    document.getElementById('birthdate').textContent += `${response.dob.date.split('T')[0]}`
 }
 
-function changeName(name) {
-    document.querySelector('#name').textContent = `${name.first} ` + `${name.last}`;
+function addName(name) {
+    document.getElementById('profile-name').textContent = `${name.first} ` + `${name.last}`;
 }
 
-function changeImage(imageSource) {
-    document.querySelector('img').src = imageSource;
+function addImage(imageSource) {
+    document.getElementById('profile-img').src = imageSource;
+}
+
+function hideMailForm() {
+    document.getElementById('mail-form').classList.add('hidden');
+}
+
+function capitalize(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+}
+
 }
